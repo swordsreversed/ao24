@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <title>AO 2024</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="https://www.mec-link.com/events/click-to-pay/">CTP</a></li>
+                <li><a href="https://www.mec-link.com/events/digital-first/">Digital First</a></li>
+                <li><a href="https://www.mec-link.com/events/sustainability/">Sustainability</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <iframe id="mainframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+
+    document.querySelectorAll('a').forEach(element => {
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById("mainframe").src = e.target.href;
+        })
+    })
+
+</script>
+
+</html>
