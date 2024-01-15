@@ -12,20 +12,21 @@
 <body>
     <div class="container">
         <nav>
-            <ul>
-                <li><a href="https://www.mec-link.com/events/open-banking/">OB</a></li>
-                <li><a href="https://www.mec-link.com/events/send/">Send</a></li>
-                <li><a href="https://www.mec-link.com/events/sustainability/">XB Commercial</a></li>
-                <li><a href="https://www.mec-link.com/events/sustainability/">PBA</a></li>
-            </ul>
+            <div>Choose a topic:</div>
+            <div class="ncontainer">
+                <ul>
+                    <li><button class=""><a href="https://www.mec-link.com/events/open-banking/" class="nav-link">OB</a></button></li>
+                    <li><button class=""><a href="https://www.mec-link.com/events/send/">Send</a></button></li>
+                    <li><button class=""><a href="https://view.ceros.com/mastercard-us/cross-border-payments/p/1">XB Commercial</a></button></li>
+                    <li><button class=""><a href="https://www.mec-link.com/events/sustainability/">PBA</a></button></li>
+                </ul>
+            </div>
         </nav>
         <div class="main">
             <iframe id="mainframe" src="" frameborder="0"></iframe>
         </div>
     </div>
-
 </body>
-
 
 <script>
 
@@ -35,6 +36,19 @@
             document.getElementById("mainframe").src = e.target.href;
         })
     })
+
+    var btnContainer = document.getElementById("navlist");
+
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+    });
+}
 
 </script>
 

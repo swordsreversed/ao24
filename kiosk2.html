@@ -12,19 +12,23 @@
 <body>
     <div class="container">
         <nav>
-            <ul>
-                <li><a href="https://www.mec-link.com/events/spending-pulse/">Spending Pulse</a></li>
-                <li><a href="https://www.mec-link.com/events/test&learn-sessionm/">Test and Learn Session</a></li>
-                <li><a href="https://www.mec-link.com/events/dynamic-yield/">Dynamic Yield</a></li>
-            </ul>
+            <div>Choose a topic:</div>
+            <div class="ncontainer">
+                <ul id="navlist">
+                    <li><button class="btn"><a href="https://www.mec-link.com/events/spending-pulse/">Spending
+                                Pulse</a></button></li>
+                    <li><button class="btn"><a href="https://www.mec-link.com/events/test&learn-sessionm/">Test and
+                                Learn SessionM</a></button></li>
+                    <li><button class="btn"><a href="https://www.mec-link.com/events/dynamic-yield/">Dynamic
+                                Yield</a></button></li>
+                </ul>
+            </div>
         </nav>
         <div class="main">
             <iframe id="mainframe" src="" frameborder="0"></iframe>
         </div>
     </div>
-
 </body>
-
 
 <script>
 
@@ -34,6 +38,19 @@
             document.getElementById("mainframe").src = e.target.href;
         })
     })
+
+    var btnContainer = document.getElementById("navlist");
+
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+    });
+}
 
 </script>
 

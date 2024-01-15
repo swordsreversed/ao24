@@ -2,25 +2,20 @@ html,
 body {
     height: 100%;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
 }
 
 body {
     background-color: #111;
 }
 
-
-
 nav {
     display: flex;
-    justify-content: space-evenly;
-    margin: 1rem 0;
-    height: 80px;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;
-    padding-bottom: 1rem;
+    justify-content: start;
+    margin: 0;
     color: aliceblue;
 }
-
 
 ul {
     margin: 0;
@@ -28,15 +23,52 @@ ul {
     list-style: none;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly
+nav div:first-child {
+    padding: 0.3rem 2rem;
+    margin: 1rem 0;
+    width: 20%;
 }
 
-li a {
+.ncontainer {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: inline-block;   
+    margin: 0.6rem;
+    min-width: 20%;
+}
+
+button {
+    border: 2px solid #FF5F00;
+    border-radius: 1.4rem;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.active {
+    background-color: #FF5F00;
+}
+
+nav li a {
     text-decoration: none;
     color: aliceblue;
-    padding: 10px 24px;
+}
+
+button:hover {
+    border: 2px solid black;
 }
 
 .container {
@@ -53,6 +85,6 @@ li a {
 }
 
 #mainframe {
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
