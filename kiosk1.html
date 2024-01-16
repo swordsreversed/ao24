@@ -15,10 +15,15 @@
             <div>Choose a topic:</div>
             <div class="ncontainer">
                 <ul id="navlist">
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/ethoca/" class="nav-link">Chargebacks</a></button></li>
+                    <li><button class="btn"><a href="https://www.mec-link.com/events/ethoca/"
+                                class="nav-link">Chargebacks</a></button></li>
                     <li><button class="btn"><a href="https://www.mec-link.com/events/riskrecon/">Cyber</a></button></li>
-                    <li><button class="btn"><a href="https://www.mec-link.com/2.0/bond-room/eye-in-the-sky/_/advancing-trust/">Advancing Trust</a></button></li>
-                    <li><button class="btn"><a href="https://www.mec-link.com/2.0/bond-room/eye-in-the-sky/_/consumer-fraud-risk/">Scam Prevention</a></button></li>
+                    <li><button class="btn"><a
+                                href="https://www.mec-link.com/2.0/bond-room/eye-in-the-sky/_/advancing-trust/">Advancing
+                                Trust</a></button></li>
+                    <li><button class="btn"><a
+                                href="https://www.mec-link.com/2.0/bond-room/eye-in-the-sky/_/consumer-fraud-risk/">Scam
+                                Prevention</a></button></li>
                 </ul>
             </div>
         </nav>
@@ -39,16 +44,16 @@
 
     var btnContainer = document.getElementById("navlist");
 
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-        }
-        this.className += " active";
-    });
-}
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            this.className += " active";
+        });
+    }
 
 </script>
 

@@ -2,12 +2,16 @@ html,
 body {
     height: 100%;
     margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
+    font-family: 'Mark Offc For MC';
+    font-size: 20px;
 }
 
 body {
     background-color: #111;
+}
+
+h1 {
+    font: normal normal bold 24px/30px 'Mark Offc For MC';
 }
 
 nav {
@@ -48,18 +52,18 @@ nav li {
 }
 
 button {
-    border: 2px solid #FF5F00;
+    border: 2px solid #CF4500;
     border-radius: 1.4rem;
-    background-color: black;
+    background-color: #000000;
     color: white;
-    padding: 0.5rem;
-    font-size: 16px;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
     cursor: pointer;
     width: 100%;
 }
 
 button.active {
-    background-color: #FF5F00;
+    background-color: #CF4500;
 }
 
 nav li a {
@@ -67,7 +71,7 @@ nav li a {
     color: aliceblue;
 }
 
-button:hover {
+button:hover, button:focused {
     border: 2px solid black;
 }
 
@@ -87,4 +91,22 @@ button:hover {
 #mainframe {
     width: 100%;
     height: 100%;
+}
+
+@font-face {
+    font-family: 'Mark Offc For MC';
+    src: url('fonts/MarkOffcForMC.woff2') format('woff2'),
+        url('fonts/MarkOffcForMC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mark Offc For MC';
+    src: url('fonts/MarkOffcForMC-Bold.woff2') format('woff2'),
+        url('fonts/MarkOffcForMC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
