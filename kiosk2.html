@@ -23,6 +23,7 @@
                                 Learn SessionM</a></button></li>
                     <li><button><a href="https://www.mec-link.com/events/dynamic-yield/">Dynamic
                                 Yield</a></button></li>
+                    <li><button><a class="forward" href="/">Menu</a></button></li>
                 </ul>
             </div>
         </nav>
@@ -36,14 +37,18 @@
 
     document.querySelectorAll('a').forEach(element => {
         element.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById("mainframe").src = e.target.href;
+            if (!element.classList.contains('forward')) {
+                e.preventDefault();
+                document.getElementById("mainframe").src = e.target.href;
+            } else {
+                window.location.href = e.target.href;
+            }
         })
     })
 
     var btnContainer = document.getElementById("navlist");
 
-    var btns = btnContainer.getElementsByClassName("button");
+    var btns = btnContainer.querySelectorAll("button");
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");

@@ -24,6 +24,7 @@
                     <li><button class="btn"><a
                                 href="https://www.mec-link.com/2.0/bond-room/eye-in-the-sky/_/consumer-fraud-risk/">Scam
                                 Prevention</a></button></li>
+                    <li><button><a class="forward" href="/">Menu</a></button></li>
                 </ul>
             </div>
         </nav>
@@ -37,8 +38,12 @@
 
     document.querySelectorAll('a').forEach(element => {
         element.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById("mainframe").src = e.target.href;
+            if (!element.classList.contains('forward')) {
+                e.preventDefault();
+                document.getElementById("mainframe").src = e.target.href;
+            } else {
+                window.location.href = e.target.href;
+            }
         })
     })
 
