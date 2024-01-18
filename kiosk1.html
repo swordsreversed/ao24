@@ -44,7 +44,7 @@
 
     var btnContainer = document.getElementById("navlist");
 
-    var btns = btnContainer.getElementsByClassName("btn");
+    var btns = btnContainer.querySelectorAll("button");
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");

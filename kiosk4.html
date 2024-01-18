@@ -12,15 +12,18 @@
 <body>
     <div class="container">
         <nav>
-            <div>Choose a topic:</div>
+            <div><h1>Choose a topic:</h1>
+                    <!-- <p><a class="forward" href="/index.html">Menu</a></p> -->
+            
+            </div>
             <div class="ncontainer">
                 <ul>
-                    <li><button class=""><a href="https://www.mec-link.com/events/open-banking/"
-                                class="nav-link">OB</a></button></li>
-                    <li><button class=""><a href="https://www.mec-link.com/events/send/">Send</a></button></li>
-                    <li><button class=""><a href="https://view.ceros.com/mastercard-us/cross-border-payments/p/1">XB
+                    <li><button><a href="https://www.mec-link.com/events/open-banking/">OB</a></button></li>
+                    <li><button><a href="https://www.mec-link.com/events/send/">Send</a></button></li>
+                    <li><button><a href="https://view.ceros.com/mastercard-us/cross-border-payments/p/1">XB
                                 Commercial</a></button></li>
-                    <li><button class=""><a class="forward" href="pba.html">PBA</a></button></li>
+                    <li><button><a class="forward" href="pba.html">PBA</a></button></li>
+                    <li><button><a class="forward" href="index.html">Menu</a></button></li>
                 </ul>
             </div>
         </nav>
@@ -46,7 +49,7 @@
 
     var btnContainer = document.getElementById("navlist");
 
-    var btns = btnContainer.getElementsByClassName("btn");
+    var btns = btnContainer.getElementsByClassName("button");
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");

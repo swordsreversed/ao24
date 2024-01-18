@@ -12,14 +12,16 @@
 <body>
     <div class="container">
         <nav>
-            <div><h1>Choose a topic:</h1></div>
+            <div>
+                <h1>Choose a topic:</h1>
+            </div>
             <div class="ncontainer">
                 <ul id="navlist">
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/spending-pulse/">Spending
+                    <li><button><a href="https://www.mec-link.com/events/spending-pulse/">Spending
                                 Pulse</a></button></li>
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/test&learn-sessionm/">Test and
+                    <li><button><a href="https://www.mec-link.com/events/test&learn-sessionm/">Test and
                                 Learn SessionM</a></button></li>
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/dynamic-yield/">Dynamic
+                    <li><button><a href="https://www.mec-link.com/events/dynamic-yield/">Dynamic
                                 Yield</a></button></li>
                 </ul>
             </div>
@@ -41,16 +43,16 @@
 
     var btnContainer = document.getElementById("navlist");
 
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", "");
-        }
-        this.className += " active";
-    });
-}
+    var btns = btnContainer.getElementsByClassName("button");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            this.className += " active";
+        });
+    }
 
 </script>
 

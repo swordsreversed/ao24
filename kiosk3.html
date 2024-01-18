@@ -15,12 +15,11 @@
             <div>Choose a topic:</div>
             <div class="ncontainer">
                 <ul id="navlist">
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/click-to-pay/"
-                                class="nav-link">CTP</a></button></li>
-                    <li><button class="btn"><a href="https://www.mec-link.com/events/digital-first/">Digital
+                    <li><button><a href="https://www.mec-link.com/events/click-to-pay/">CTP</a></button></li>
+                    <li><button><a href="https://www.mec-link.com/events/digital-first/">Digital
                                 First</a></button></li>
-                    <li><button class="btn"><a
-                                href="https://www.mec-link.com/events/sustainability/">Sustainability</a></button></li>
+                    <li><button><a href="https://www.mec-link.com/events/sustainability/">Sustainability</a></button>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -41,7 +40,7 @@
 
     var btnContainer = document.getElementById("navlist");
 
-    var btns = btnContainer.getElementsByClassName("btn");
+    var btns = btnContainer.getElementsByClassName("button");
     for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");

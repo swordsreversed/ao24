@@ -6,6 +6,18 @@ body {
     font-size: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FFF;
+}
+
+p {
+    font-size: 0.7rem;
+}
+
 body {
     background-color: #111;
 }
@@ -57,9 +69,10 @@ button {
     background-color: #000000;
     color: white;
     padding: 0.5rem 1rem;
-    font-size: 1em;
+    font-size: 0.8em;
     cursor: pointer;
     width: 100%;
+    transition-duration: 0.4s;
 }
 
 button.active {
@@ -71,8 +84,12 @@ nav li a {
     color: aliceblue;
 }
 
-button:hover, button:focused {
+button:focused {
     border: 2px solid black;
+}
+
+button:hover {
+    background-color: #CF4500;
 }
 
 .container {
